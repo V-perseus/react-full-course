@@ -32,20 +32,44 @@ import React, {useState} from 'react'
 //     )
 // }
 
+// const Form = () => {
+//     const [greeting, setGreeting] = useState(
+//         'hello nice to meet you how are you today?'
+//     )
+//     const handleChange = event => setGreeting(event.target.value);
+//     return (
+//         <Headline headline={greeting} onchangeHeadline={handleChange}/>
+//     )
+// }
+// const Headline = ({headline, onChangeHeadline}) => (
+//     <div>
+//         <h1>{headline}</h1>
+//         <input type="text" value={headline} onChange={onChangeHeadline}></input>
+//     </div>
+// )
+
 const Form = () => {
-    const [greeting, setGreeting] = useState(
-        'hello nice to meet you how are you today?'
-    )
+    const [greeting, setGreeting] = useState (
+        'hello nice to meet you'
+    );
     const handleChange = event => setGreeting(event.target.value);
+    
     return (
-        <Headline headline={greeting} onchangeHeadline={handleChange}/>
+        <div>
+            <Headline headline={greeting} />
+            <Input value={greeting} onChangeInput={handleChange}>
+                Set Greeting:
+            </Input>
+        </div>
     )
 }
-const Headline = ({headline, onChangeHeadline}) => (
-    <div>
-        <h1>{headline}</h1>
-        <input type="text" value={headline} onChange={onChangeHeadline}></input>
-    </div>
+const Headline = ({headline}) => <h1>{headline}</h1>;
+
+const Input = ({value, onChangeInput, children}) => (
+    <label>
+        {children}
+        <input type="text" value={value} onChange={onChangeInput} />
+    </label>
 )
 
 export default Form
