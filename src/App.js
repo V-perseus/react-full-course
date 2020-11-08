@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import './App.css';
 import EventBind from "./components/EventBind";
+import FragmentDemo from "./components/FragmentDemo";
 // import FunctionClick from "./components/FunctionClick";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       {/* <FunctionClick /> */}
       <EventBind />
+      <FragmentDemo />
     </div>
   );
 }
