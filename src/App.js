@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="App">
       {/* <FunctionClick /> */}
-      {/* <EventBind />
-      <FragmentDemo /> */}
-      <Form />
+      {/* <EventBind /> */}
+      <FragmentDemo />
+      {/* <Form /> */}
     </div>
   );
 }
